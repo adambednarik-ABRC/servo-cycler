@@ -1,6 +1,8 @@
 # Changelog
 
-## 1.8.7 — first public release
+## 1.8.8 — first public release
+- Installation and user manual (MANUAL.pdf, README)
+- Disclaimer and safety notes, MIT license
 - Smooth motion: the radio's Slow up / Slow down (0.5 s) moves the servos; the script only
   sets the end points, so screen refreshes can never make a servo stutter
 - Fixed speed of 30 cycles per minute, full travel from end to end
@@ -15,4 +17,4 @@
 - Scales to X20 / X18 / X14 / X10 / X12S screens
 - Model pictures (PNG) for each radio size
 
-Versions before 1.8.7 were development versions and were not published.
+Versions before 1.8.8 were development versions and were not published.
