@@ -10,7 +10,7 @@ servo temperatures, current and receiver voltage. Weak, worn or overheating serv
 before they let you down in a model.
 
 <p align="center">
-  <img src="docs/images/dashboard-preview.png" alt="Servo Cycler dashboard" width="600">
+  <img src="docs/images/servo-cycler-demo.gif" alt="Servo Cycler running" width="600">
 </p>
 
 > **Read [DISCLAIMER.txt](DISCLAIMER.txt) before use.** Servo Cycler is meant to find poor
