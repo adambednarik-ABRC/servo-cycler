@@ -1,0 +1,114 @@
+SERVO CYCLER by ABRC - DISCLAIMER AND SAFETY
+============================================
+
+1. DISCLAIMER
+-------------
+Servo Cycler is provided free of charge, "as is", without warranty of any kind,
+express or implied, including without limitation any warranty of fitness for a
+particular purpose, accuracy or reliability.
+
+Servo Cycler is a test tool. Its purpose is to load servos continuously so that
+weak, worn or faulty servos show up. A servo that fails during a test has done
+what the test is for. Running a servo continuously, at full travel, for many
+cycles can overheat it, wear it out or destroy it. This applies above all to a
+servo that is already weak, under load, or blocked by a linkage or a mechanical
+stop.
+
+By installing or using Servo Cycler you accept that:
+
+- You use it entirely at your own risk.
+- The author (ABRC) is not liable for any damage to servos, receivers,
+  batteries, radios, models or other property, or for any injury, loss or
+  consequential damage, however caused. This includes damage caused by
+  incorrect setup, by use in a model that is used for flying or driving, by
+  operating the tool while a model is in use, or by a fault in the script, the
+  radio firmware or the hardware.
+- You are responsible for setting up the radio correctly as described below,
+  and for checking that the setup is safe before every test.
+- Test results such as temperature, current and voltage readings depend on your
+  sensors and telemetry. They are given for information only and are not a
+  guarantee that a servo is safe to fly.
+
+Where the law does not allow some of these exclusions, they apply only as far
+as the law permits.
+
+
+2. WHY SERVO CYCLER MUST NEVER BE USED IN A MODEL THAT FLIES
+------------------------------------------------------------
+Servo Cycler moves every channel that uses it to its end points, again and
+again, for minutes at a time, regardless of the sticks. In a model that is
+flying or driving, that means total loss of control.
+
+The tool has these built-in protections:
+
+- Mixes: it only moves channels whose mixes use the "Servo Cycler" source. A
+  model without those mixes is not affected.
+- Lua source: the source only works in a model where it has been switched on
+  under Model > Lua.
+- Widget: a test can only run in the model that shows the Servo Cycler widget
+  on its screen.
+- Switching models: switching to another model stops a running test
+  immediately.
+- Power-up: if the start switch is already ON when the radio is switched on,
+  or when you switch to the model, nothing starts until the switch is turned
+  OFF and ON again.
+- Stopping: turning the start switch OFF stops the test.
+
+These protections only work if the setup below is followed. If the Servo
+Cycler mixes and widget are added to a flying model, the protections no longer
+separate testing from flying.
+
+
+3. WHAT YOU MUST DO
+-------------------
+1. Use a separate test model. Create a model in the radio used only for
+   testing, and keep all Servo Cycler mixes, the widget and the Lua source in
+   that model alone.
+2. Use a spare switch that does nothing else as the start switch. Make it a
+   switch you cannot flip by accident.
+3. Set Slow up and Slow down to 0.5 s. Set them either in the Servo Cycler
+   mixes or on the output channel, not both. Do this in the test model only.
+4. Check the free travel before the first test. The servo must reach both end
+   points without hitting a stop. If it is installed in a model, its control
+   surface or linkage must also move freely. Reduce the channel limits or the
+   travel knob (pot 1) if needed. A servo pushing against a stop draws high
+   current and overheats quickly.
+5. Watch the test. Keep an eye on servo temperature and current. Stop the test
+   if a servo gets hot, buzzes, stalls or draws unusually high current.
+6. Use a suitable power supply for the receiver and servos. It must be able to
+   run every servo under test continuously.
+7. Make installed servos safe before testing. If you test servos fitted in a
+   model:
+   - Remove the propeller or rotor blades, or disconnect the motor or ESC.
+   - Secure the model.
+   - Keep people, hands and objects clear of moving parts.
+
+
+4. WHAT YOU MUST NOT DO
+-----------------------
+1. Never add the Servo Cycler source to a mix in a model that is flown or
+   driven.
+2. Never put the Servo Cycler widget on a screen of a model that is flown or
+   driven.
+3. Never start a test while a model is being operated. That covers flying,
+   taxiing or driving, and any time the motor can run.
+4. Never mix the Servo Cycler source into the throttle, ESC or motor channel,
+   or into any channel that controls a motor, retracts, brakes or other
+   function that could cause injury.
+5. Never use a switch for starting that is also used for flight functions,
+   such as flight modes, throttle cut or arming.
+6. Never leave a running test unattended, and never test servos you need to
+   rely on without checking them afterwards.
+7. Never use Servo Cycler as proof that a servo is airworthy. A servo that
+   passes the test can still fail later.
+
+
+5. WHEN SOMETHING GOES WRONG
+----------------------------
+- To stop: turn the start switch OFF. The servos return to the centre at the
+  slow rate, not instantly.
+- If the script stops with an error: the error appears in red at the bottom of
+  the screen. A servo may then stay at its last position, so switch off the
+  receiver power if a servo stays under load.
+- If anything moves unexpectedly: switch off the receiver power first, then
+  check the setup.
