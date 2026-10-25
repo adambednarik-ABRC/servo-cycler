@@ -6,7 +6,7 @@
   "introduction": "Servo tester by ABRC: cycles servos end to end (1-999 cycles, 30 cycles/min) with smooth motion and live temperature, current and RX voltage. Read the manual and DISCLAIMER.txt: use only in a separate test model.",
   "releaseNotes": {
     "format": "markdown",
-    "content": "## 1.8.8\n- First public release\n- Installation and user manual (MANUAL.pdf)\n- Disclaimer and safety notes (DISCLAIMER.txt), MIT license\n- Smooth motion at 30 cycles/min via Slow up/down 0.5 s, full travel\n- Pot 2 = number of cycles, pot 1 = travel\n- Dashboard with progress bar, servo-arm cycle dial, temperature bars, current and RX voltage\n- Model pictures for X20, X18 / Twin, X14, X10 / X12S"
+    "content": "## 1.8.8\n- First public release\n- Installation and user manual (ServoCycler-Manual-v1.8.8.pdf)\n- Disclaimer and safety notes (DISCLAIMER.txt), MIT license\n- Smooth motion at 30 cycles/min via Slow up/down 0.5 s, full travel\n- Pot 2 = number of cycles, pot 1 = travel\n- Dashboard with progress bar, servo-arm cycle dial, temperature bars, current and RX voltage\n- Model pictures for X20, X18 / Twin, X14, X10 / X12S"
   },
   "folder": "svcycler",
   "files": [

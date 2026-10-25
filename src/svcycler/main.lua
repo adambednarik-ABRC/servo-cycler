@@ -1,5 +1,5 @@
 -- Servo Cycler for FrSky Ethos  -  by ABRC   (version 1.8.8)
--- READ DISCLAIMER.txt / MANUAL.pdf FIRST: test model only, never in a model that is flown or driven.
+-- READ DISCLAIMER.txt and the Servo Cycler manual (PDF) FIRST: test model only, never in a model that is flown or driven.
 -- MIT license, (c) 2026 Adam Bednarik (ABRC). https://github.com/adambednarik-ABRC/servo-cycler
 -- Copy to the radio as:  /scripts/svcycler/main.lua  (+ the logot_*.png files)
 --

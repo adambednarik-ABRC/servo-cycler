@@ -1,7 +1,7 @@
 # Changelog
 
 ## 1.8.8 — first public release
-- Installation and user manual (MANUAL.pdf, README)
+- Installation and user manual (ServoCycler-Manual-v1.8.8.pdf, README)
 - Disclaimer and safety notes, MIT license
 - Smooth motion: the radio's Slow up / Slow down (0.5 s) moves the servos; the script only
   sets the end points, so screen refreshes can never make a servo stutter

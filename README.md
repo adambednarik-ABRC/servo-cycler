@@ -17,7 +17,7 @@ before they let you down in a model.
 > servos, and a test can damage or destroy a servo. Use it **only in a separate test model**,
 > never in a model that is flown or driven.
 
-📘 **Full manual with all steps and screenshots: [docs/MANUAL.pdf](docs/MANUAL.pdf)** (also in the download zips)
+📘 **Full manual with all steps and screenshots: [ServoCycler-Manual-v1.8.8.pdf](docs/ServoCycler-Manual-v1.8.8.pdf)** (also in the download zips)
 
 ---
 
