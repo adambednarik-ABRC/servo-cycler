@@ -109,16 +109,20 @@ Title OFF.
 | Setting | What it does |
 |---|---|
 | Start switch | ON = start, OFF = stop. Use a spare switch that does nothing else. |
-| Cycles knob (pot 2) | Number of cycles: 25 % = 17, 50 % = 126, 75 % = 422, full = 999 |
-| Cycles (no knob) | Fixed number of cycles when no knob is set |
+| Cycles knob (pot 2) | Approximate number of cycles: 25 % = 17, 50 % = 126, 75 % = 422, full = 999. Use a knob or slider that is **calibrated** (Ethos › System › Hardware) |
+| Cycles (no knob) | Exact number of cycles. Leave *Cycles knob* empty and type the number here (e.g. 61) |
 | Travel knob (pot 1) | Travel 0 – 100 % |
-| Travel (no knob) | Fixed travel when no knob is set |
+| Travel (no knob) | Exact travel. Leave *Travel knob* empty and type the value here |
 | Bottom dials | Travel left / Cycles right, or swapped |
-| Temp sensor 1 – 8 | Servo temperature sensors (telemetry); the 4 hottest reporting ones are shown |
+| Temp sensor 1 – 8 | Servo temperature sensors (optional); the 4 hottest reporting ones are shown |
 | Temp warning | Temperature at which a bar is fully red (default 60 °C) |
-| Current sensor | Current sensor (telemetry), shown as **A** |
-| RX battery sensor | Receiver voltage sensor (telemetry), shown as **V** |
+| Current sensor | Current sensor (optional), shown as **A**: the combined draw of all servos, so you can check it stays below the amp rating of the receiver |
+| RX battery sensor | Receiver voltage sensor (optional), shown as **V**: watch it during a long test so the battery is not deep-discharged |
 | Slow up/down | Reminder: the test model needs 0.5 s (30 cycles/min) |
+
+The sensor fields are all optional and only show readings; they do not change how the servos
+move. Pick a sensor from either the *Telemetry* or the *Telemetry active* list, or leave the
+field empty.
 
 ---
 
@@ -137,6 +141,25 @@ nothing starts until you switch it OFF and ON again.
   <img src="docs/screenshots/13-dashboard-running.png" width="260">
   <img src="docs/screenshots/14-dashboard-done.png" width="260">
 </p>
+
+---
+
+## Troubleshooting
+
+| Problem | Check |
+|---|---|
+| Servos do not move | Model › Lua: Servo Cycler ON? A Free mix with source Servo Cycler on that channel? Start switch ON (after OFF)? Travel knob above 0 %? |
+| NO SWITCH on the dashboard | Set the start switch in the widget configuration. |
+| Nothing starts with the switch ON | By design after power-up or a model change: switch OFF and ON again. After DONE: switch OFF and ON to run again. |
+| Servo does not reach its end points | Slow longer than 0.5 s, or slow set both in the mix and on the channel. Channel Min / Max limits too small. Travel knob below 100 %. |
+| Servo pauses at the end points | Slow shorter than 0.5 s. Set exactly 0.5 s up and down. (At travel below 100 % a short pause at the ends is normal.) |
+| Movement is rough or jerky | Slow not set (the servo jumps from end to end), or the servo itself, which is what the test is for. |
+| Cycles stuck above a number (e.g. 123) | The cycles input must be a knob or slider, calibrated so it reads its full range (Ethos › System › Hardware). A stick, or a pot that rests mid-position, cannot reach the low numbers. The knob only picks an approximate number. For an exact number leave *Cycles knob* empty and type the number in *Cycles (no knob)*. |
+| Not sure what to select for the sensors | All sensor fields are optional and only show readings. Pick the sensor from the *Telemetry* or the *Telemetry active* list, or leave the field empty. |
+| What are A and V for? | A is the current drawn by all servos together: check it stays below the amp rating of your receiver. V is the receiver battery voltage: watch it so the battery is not deep-discharged. |
+| No temperature bars | Sensors not set, or no telemetry from them at the moment. Only reporting sensors are shown. |
+| A / V show "--" | Sensor set but no telemetry received. |
+| Red error line | Note the message and report it with your radio model and Ethos version. |
 
 ---
 
